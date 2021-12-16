@@ -1,0 +1,12 @@
+D:\Projects\Grocery_Store_POS\POS\POS.Business\bin\Debug\netcoreapp3.1\POS.Business.deps.json
+D:\Projects\Grocery_Store_POS\POS\POS.Business\bin\Debug\netcoreapp3.1\POS.Business.dll
+D:\Projects\Grocery_Store_POS\POS\POS.Business\bin\Debug\netcoreapp3.1\POS.Business.pdb
+D:\Projects\Grocery_Store_POS\POS\POS.Business\bin\Debug\netcoreapp3.1\POS.Data.dll
+D:\Projects\Grocery_Store_POS\POS\POS.Business\bin\Debug\netcoreapp3.1\POS.Data.pdb
+D:\Projects\Grocery_Store_POS\POS\POS.Business\obj\Debug\netcoreapp3.1\POS.Business.csprojAssemblyReference.cache
+D:\Projects\Grocery_Store_POS\POS\POS.Business\obj\Debug\netcoreapp3.1\POS.Business.AssemblyInfoInputs.cache
+D:\Projects\Grocery_Store_POS\POS\POS.Business\obj\Debug\netcoreapp3.1\POS.Business.AssemblyInfo.cs
+D:\Projects\Grocery_Store_POS\POS\POS.Business\obj\Debug\netcoreapp3.1\POS.Business.csproj.CoreCompileInputs.cache
+D:\Projects\Grocery_Store_POS\POS\POS.Business\obj\Debug\netcoreapp3.1\POS.Business.csproj.CopyComplete
+D:\Projects\Grocery_Store_POS\POS\POS.Business\obj\Debug\netcoreapp3.1\POS.Business.dll
+D:\Projects\Grocery_Store_POS\POS\POS.Business\obj\Debug\netcoreapp3.1\POS.Business.pdb

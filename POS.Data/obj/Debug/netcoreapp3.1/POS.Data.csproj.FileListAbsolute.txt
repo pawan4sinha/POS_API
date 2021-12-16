@@ -1,0 +1,11 @@
+D:\Projects\Grocery_Store_POS\POS\POS.Data\bin\Debug\netcoreapp3.1\POS.Data.deps.json
+D:\Projects\Grocery_Store_POS\POS\POS.Data\bin\Debug\netcoreapp3.1\POS.Data.runtimeconfig.json
+D:\Projects\Grocery_Store_POS\POS\POS.Data\bin\Debug\netcoreapp3.1\POS.Data.runtimeconfig.dev.json
+D:\Projects\Grocery_Store_POS\POS\POS.Data\bin\Debug\netcoreapp3.1\POS.Data.dll
+D:\Projects\Grocery_Store_POS\POS\POS.Data\bin\Debug\netcoreapp3.1\POS.Data.pdb
+D:\Projects\Grocery_Store_POS\POS\POS.Data\obj\Debug\netcoreapp3.1\POS.Data.AssemblyInfoInputs.cache
+D:\Projects\Grocery_Store_POS\POS\POS.Data\obj\Debug\netcoreapp3.1\POS.Data.AssemblyInfo.cs
+D:\Projects\Grocery_Store_POS\POS\POS.Data\obj\Debug\netcoreapp3.1\POS.Data.csproj.CoreCompileInputs.cache
+D:\Projects\Grocery_Store_POS\POS\POS.Data\obj\Debug\netcoreapp3.1\POS.Data.dll
+D:\Projects\Grocery_Store_POS\POS\POS.Data\obj\Debug\netcoreapp3.1\POS.Data.pdb
+D:\Projects\Grocery_Store_POS\POS\POS.Data\obj\Debug\netcoreapp3.1\POS.Data.genruntimeconfig.cache

@@ -1,0 +1,14 @@
+D:\Projects\Grocery_Store_POS\POS\POS.Repository\bin\Debug\netcoreapp3.1\POS.Repository.deps.json
+D:\Projects\Grocery_Store_POS\POS\POS.Repository\bin\Debug\netcoreapp3.1\POS.Repository.dll
+D:\Projects\Grocery_Store_POS\POS\POS.Repository\bin\Debug\netcoreapp3.1\POS.Repository.pdb
+D:\Projects\Grocery_Store_POS\POS\POS.Repository\bin\Debug\netcoreapp3.1\POS.Business.dll
+D:\Projects\Grocery_Store_POS\POS\POS.Repository\bin\Debug\netcoreapp3.1\POS.Data.dll
+D:\Projects\Grocery_Store_POS\POS\POS.Repository\bin\Debug\netcoreapp3.1\POS.Business.pdb
+D:\Projects\Grocery_Store_POS\POS\POS.Repository\bin\Debug\netcoreapp3.1\POS.Data.pdb
+D:\Projects\Grocery_Store_POS\POS\POS.Repository\obj\Debug\netcoreapp3.1\POS.Repository.csprojAssemblyReference.cache
+D:\Projects\Grocery_Store_POS\POS\POS.Repository\obj\Debug\netcoreapp3.1\POS.Repository.AssemblyInfoInputs.cache
+D:\Projects\Grocery_Store_POS\POS\POS.Repository\obj\Debug\netcoreapp3.1\POS.Repository.AssemblyInfo.cs
+D:\Projects\Grocery_Store_POS\POS\POS.Repository\obj\Debug\netcoreapp3.1\POS.Repository.csproj.CoreCompileInputs.cache
+D:\Projects\Grocery_Store_POS\POS\POS.Repository\obj\Debug\netcoreapp3.1\POS.Repository.csproj.CopyComplete
+D:\Projects\Grocery_Store_POS\POS\POS.Repository\obj\Debug\netcoreapp3.1\POS.Repository.dll
+D:\Projects\Grocery_Store_POS\POS\POS.Repository\obj\Debug\netcoreapp3.1\POS.Repository.pdb

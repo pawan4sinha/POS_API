@@ -1,0 +1,15 @@
+D:\Projects\Grocery_Store_POS\POS\POS.Business\bin\Release\net5.0\POS.Business.deps.json
+D:\Projects\Grocery_Store_POS\POS\POS.Business\bin\Release\net5.0\POS.Business.dll
+D:\Projects\Grocery_Store_POS\POS\POS.Business\bin\Release\net5.0\ref\POS.Business.dll
+D:\Projects\Grocery_Store_POS\POS\POS.Business\bin\Release\net5.0\POS.Business.pdb
+D:\Projects\Grocery_Store_POS\POS\POS.Business\bin\Release\net5.0\POS.Data.dll
+D:\Projects\Grocery_Store_POS\POS\POS.Business\bin\Release\net5.0\POS.Data.pdb
+D:\Projects\Grocery_Store_POS\POS\POS.Business\obj\Release\net5.0\POS.Business.csproj.AssemblyReference.cache
+D:\Projects\Grocery_Store_POS\POS\POS.Business\obj\Release\net5.0\POS.Business.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Grocery_Store_POS\POS\POS.Business\obj\Release\net5.0\POS.Business.AssemblyInfoInputs.cache
+D:\Projects\Grocery_Store_POS\POS\POS.Business\obj\Release\net5.0\POS.Business.AssemblyInfo.cs
+D:\Projects\Grocery_Store_POS\POS\POS.Business\obj\Release\net5.0\POS.Business.csproj.CoreCompileInputs.cache
+D:\Projects\Grocery_Store_POS\POS\POS.Business\obj\Release\net5.0\POS.Business.csproj.CopyComplete
+D:\Projects\Grocery_Store_POS\POS\POS.Business\obj\Release\net5.0\POS.Business.dll
+D:\Projects\Grocery_Store_POS\POS\POS.Business\obj\Release\net5.0\ref\POS.Business.dll
+D:\Projects\Grocery_Store_POS\POS\POS.Business\obj\Release\net5.0\POS.Business.pdb

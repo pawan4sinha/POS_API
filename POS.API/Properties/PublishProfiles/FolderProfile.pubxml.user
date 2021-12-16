@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\Projects\Deployment Packages\POS_API</_PublishTargetUrl>
+    <History>True|2021-10-23T10:28:02.8169633Z;True|2021-07-25T12:47:43.2248990+05:30;True|2021-07-12T21:36:02.4858762+05:30;True|2021-07-12T18:17:09.5261943+05:30;True|2021-07-11T18:28:11.8371461+05:30;True|2021-07-09T18:15:44.7097911+05:30;True|2021-07-09T16:25:41.0058658+05:30;True|2021-07-09T16:25:11.9107905+05:30;True|2021-06-30T19:14:28.0040806+05:30;True|2021-06-29T18:12:29.7789995+05:30;True|2021-06-29T18:12:00.6665375+05:30;True|2021-06-28T18:56:05.7680370+05:30;True|2021-06-28T18:31:09.4067035+05:30;True|2021-06-28T18:24:46.7955080+05:30;False|2021-06-28T18:23:57.0686616+05:30;True|2021-06-28T18:09:27.3153557+05:30;True|2021-06-18T17:42:39.3068171+05:30;False|2021-06-18T17:40:27.9991356+05:30;True|2021-06-18T17:11:07.1208178+05:30;</History>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="POS_DB">
+      <Value>Data Source=DESKTOP-9LIU6RL\SQLEXPRESS%3b Initial Catalog=Grocery_Store_Dev%3b Integrated Security=FALSE%3b User ID=sa%3b password=JumboW0rld%40987</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

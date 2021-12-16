@@ -1,0 +1,15 @@
+D:\Projects\Grocery_Store_POS\POS\POS.Data\bin\Debug\net5.0\POS.Data.deps.json
+D:\Projects\Grocery_Store_POS\POS\POS.Data\bin\Debug\net5.0\POS.Data.runtimeconfig.json
+D:\Projects\Grocery_Store_POS\POS\POS.Data\bin\Debug\net5.0\POS.Data.runtimeconfig.dev.json
+D:\Projects\Grocery_Store_POS\POS\POS.Data\bin\Debug\net5.0\POS.Data.dll
+D:\Projects\Grocery_Store_POS\POS\POS.Data\bin\Debug\net5.0\ref\POS.Data.dll
+D:\Projects\Grocery_Store_POS\POS\POS.Data\bin\Debug\net5.0\POS.Data.pdb
+D:\Projects\Grocery_Store_POS\POS\POS.Data\obj\Debug\net5.0\POS.Data.csproj.AssemblyReference.cache
+D:\Projects\Grocery_Store_POS\POS\POS.Data\obj\Debug\net5.0\POS.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Grocery_Store_POS\POS\POS.Data\obj\Debug\net5.0\POS.Data.AssemblyInfoInputs.cache
+D:\Projects\Grocery_Store_POS\POS\POS.Data\obj\Debug\net5.0\POS.Data.AssemblyInfo.cs
+D:\Projects\Grocery_Store_POS\POS\POS.Data\obj\Debug\net5.0\POS.Data.csproj.CoreCompileInputs.cache
+D:\Projects\Grocery_Store_POS\POS\POS.Data\obj\Debug\net5.0\POS.Data.dll
+D:\Projects\Grocery_Store_POS\POS\POS.Data\obj\Debug\net5.0\ref\POS.Data.dll
+D:\Projects\Grocery_Store_POS\POS\POS.Data\obj\Debug\net5.0\POS.Data.pdb
+D:\Projects\Grocery_Store_POS\POS\POS.Data\obj\Debug\net5.0\POS.Data.genruntimeconfig.cache

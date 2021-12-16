@@ -1,0 +1,734 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>POS.API</name>
+    </assembly>
+    <members>
+        <member name="M:POS.API.Controllers.AccountsController.Login(POS.Data.Entities.AccountsForLoginEntity)">
+            <summary>
+            Login or validate user credentails
+            </summary>
+            <response code="200">Return the token and login details after validating user</response>
+            <response code="400">Unable to procced due to validation error</response>
+            <response code="401">Unable to login due to invalid or expired credentials. Unauthoorized access.</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.AccountsController.Get">
+            <summary>
+            Return all users in the system. Order by Username column
+            </summary>
+            <response code="200">Return all users in the system. Order by Username column</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.AccountsController.Get(System.Guid)">
+            <summary>
+            Return the user account, searched for the specific 'id'.
+            </summary>
+            <response code="200">Return the user account, searched for the specific 'id'</response>
+            <response code="404">User account not found for the specific 'id'</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.AccountsController.Get(System.String)">
+            <summary>
+            Return the user account, searched for the specific 'name'.
+            </summary>
+            <response code="200">Return the user account, searched for the specific 'name'</response>
+            <response code="404">User account not found for the specific search name</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.AccountsController.Create(POS.Data.Entities.AccountsForCreateEntity)">
+            <summary>
+            Creates a new account in the system
+            </summary>
+            <response code="201">User account created successfull in the system</response>
+            <response code="400">Unable to create due to validation error</response>
+            <response code="409">Dupplicate record found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.AccountsController.Put(System.Guid,POS.Data.Entities.AccountsForUpdateEntity)">
+            <summary>
+            Update the user account, for the specific 'id'
+            </summary>
+            <response code="204">Update the user account, for the specific 'id'</response>
+            <response code="400">Unable to update due to validation error</response>
+            <response code="404">User account not found for the specific 'id'</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.AccountsController.Delete(System.Guid)">
+            <summary>
+            Delete the user role, for the specific 'id'
+            </summary>
+            <response code="409">User account cannot be deleted</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.AccountsController.ResetPassword(POS.Data.Entities.AccountsForLoginEntity)">
+            <summary>
+            Update/reset password, for the specific 'username'
+            </summary>
+            <response code="204">Update/reset password, for the specific 'username'</response>
+            <response code="400">Unable to update due to validation error</response>
+            <response code="404">User account not found for the specific 'username'</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.CompanyController.Create(POS.Data.Entities.CompanyForCreateEntity)">
+            <summary>
+            Creates a Company in the system.
+            </summary>
+            <response code="201">Company created successfull in the system</response>
+            <response code="400">Unable to create due to validation error</response>
+            <response code="409">Dupplicate record found</response>
+            <response code="409">Cannot create, becasue default already exsits</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.CompanyController.Get">
+            <summary>
+            Return all companies in the system. Order by company name column
+            </summary>
+            <response code="200">Return all companies in the system. Order by company column</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.CompanyController.Get(System.Guid)">
+            <summary>
+            Return the company, searched for the specific 'id'.
+            </summary>
+            <response code="200">Return the company, searched for the specific 'id'</response>
+            <response code="404">Company not found for the specific 'id'</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.CompanyController.Put(System.Guid,POS.Data.Entities.CompanyForUpdateEntity)">
+            <summary>
+            Update the company, for the specific 'id'
+            </summary>
+            <response code="204">Update the company, for the specific 'id'</response>
+            <response code="400">Unable to update due to validation error</response>
+            <response code="404">Company not found for the specific 'id'</response>
+            <response code="409">Dupplicate record found</response>
+            <response code="409">Cannot update, becasue default already exsits</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.CompanyController.Delete(System.Guid)">
+            <summary>
+            Delete the company, for the specific 'id'
+            </summary>
+            <response code="204">Delete the company, for the specific 'id'</response>
+            <response code="404">Company not found for the specific 'id'</response>
+            <response code="409">Default set company cannot be deleted</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.CountryController.Get">
+            <summary>
+            Return all active Countries in the system. Order by Country Name column
+            </summary>
+            <response code="200">Return all active countries in the system. Order by country name column</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.ExpenseController.Get">
+            <summary>
+            Return all 'Expenses master' in the system. Order by name column
+            </summary>
+            <response code="200">Return all 'Expenses master' in the system. Order by name column</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.ExpenseController.Get(System.Guid)">
+            <summary>
+            Return the 'Expense Master', searched for the specific 'id'.
+            </summary>
+            <response code="200">Return the 'Expense Master', searched for the specific 'id'</response>
+            <response code="404">'Expense Master' not found for the specific 'id'</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.ExpenseController.Get(System.String)">
+            <summary>
+            Return the 'Expense Master', searched for the specific 'name'.
+            </summary>
+            <response code="200">Return the 'Expense Master', searched for the specific 'id'</response>
+            <response code="404">'Expense Master' not found for the specific 'name'</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.ExpenseController.Create(POS.Data.Entities.MasterExpenseForCreateEntity)">
+            <summary>
+            Creates a 'Expense Master' in the system.
+            </summary>
+            <response code="201">'Expense Master' created successfull in the system</response>
+            <response code="400">Unable to create due to validation error</response>
+            <response code="409">Dupplicate record found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.ExpenseController.Put(System.Guid,POS.Data.Entities.MasterExpenseForUpdateEntity)">
+            <summary>
+            Update the 'Expense Master', for the specific 'id'
+            </summary>
+            <response code="204">Update the 'Expense Master', for the specific 'id'</response>
+            <response code="400">Unable to update due to validation error</response>
+            <response code="404">'Expense Master' not found for the specific 'id'</response>
+            <response code="409">Dupplicate record found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.ExpenseController.Delete(System.Guid)">
+            <summary>
+            Delete the 'Expense Master', for the specific 'id'
+            </summary>
+            <response code="204">Delete the 'Expense Master', for the specific 'id'</response>
+            <response code="404">'Expense Master' not found for the specific 'id'</response>
+            <response code="409">Cannot delete, due to referencing data found in other tables</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.ExpenseTypeController.Get">
+            <summary>
+            Return all 'Expense Type' in the system. Order by name column
+            </summary>
+            <response code="200">Return all 'Expense Type' in the system. Order by name column</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.ManufacturersController.Get">
+            <summary>
+            Return all 'Manufacturers' in the system. Order by name column
+            </summary>
+            <response code="200">Return all 'Manufacturers' in the system. Order by name column</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.ManufacturersController.Get(System.Guid)">
+            <summary>
+            Return the 'Manufacturer', searched for the specific 'id'.
+            </summary>
+            <response code="200">Return the 'Manufacturer', searched for the specific 'id'</response>
+            <response code="404">'Manufacturer' not found for the specific 'id'</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.ManufacturersController.Get(System.String)">
+            <summary>
+            Return the 'Manufacturers', searched for the specific 'name'.
+            </summary>
+            <response code="200">Return the 'Manufacturers', searched for the specific 'name'</response>
+            <response code="404">'Manufacturers' not found for the specific 'name'</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.ManufacturersController.Create(POS.Data.Entities.MasterManufacturersForCreateEntity)">
+            <summary>
+            Creates a 'Manufacturer' in the system.
+            </summary>
+            <response code="201">'Manufacturer' created successfull in the system</response>
+            <response code="400">Unable to create due to validation error</response>
+            <response code="409">Dupplicate record found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.ManufacturersController.Put(System.Guid,POS.Data.Entities.MasterManufacturersForUpdateEntity)">
+            <summary>
+            Update the 'Manufacturer', for the specific 'id'
+            </summary>
+            <response code="204">Update the 'Manufacturer', for the specific 'id'</response>
+            <response code="400">Unable to update due to validation error</response>
+            <response code="404">'Manufacturer' not found for the specific 'id'</response>
+            <response code="409">Dupplicate record found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.ManufacturersController.Delete(System.Guid)">
+            <summary>
+            Delete the 'Manufacturer', for the specific 'id'
+            </summary>
+            <response code="204">Delete the 'Manufacturer', for the specific 'id'</response>
+            <response code="404">'Manufacturer' not found for the specific 'id'</response>
+            <response code="409">Cannot delete, due to referencing data found in other tables</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.ProductCategoryController.Get">
+            <summary>
+            Return all 'Product Category' in the system. Order by name column
+            </summary>
+            <response code="200">Return all 'Product Category' in the system. Order by name column</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.ProductCategoryController.Get(System.Guid)">
+            <summary>
+            Return the 'Product Category', searched for the specific 'id'.
+            </summary>
+            <response code="200">Return the 'Product Category', searched for the specific 'id'</response>
+            <response code="404">'Product Category' not found for the specific 'id'</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.ProductCategoryController.Get(System.String)">
+            <summary>
+            Return the 'Product Category', searched for the specific 'name'.
+            </summary>
+            <response code="200">Return the 'Product Category', searched for the specific 'name'</response>
+            <response code="404">'Product Category' not found for the specific 'name'</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.ProductCategoryController.Create(POS.Data.Entities.ProductCategoryForCreateEntity)">
+            <summary>
+            Creates a 'Product Category' in the system.
+            </summary>
+            <response code="201">'Product Category' created successfull in the system</response>
+            <response code="400">Unable to create due to validation error</response>
+            <response code="409">Dupplicate record found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.ProductCategoryController.Put(System.Guid,POS.Data.Entities.ProductCategoryForUpdateEntity)">
+            <summary>
+            Update the 'Product Category', for the specific 'id'
+            </summary>
+            <response code="204">Update the 'Product Category', for the specific 'id'</response>
+            <response code="400">Unable to update due to validation error</response>
+            <response code="404">'Product Category' not found for the specific 'id'</response>
+            <response code="409">Dupplicate record found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.ProductCategoryController.Delete(System.Guid)">
+            <summary>
+            Delete the 'Product Category', for the specific 'id'
+            </summary>
+            <response code="204">Delete the 'Product Category', for the specific 'id'</response>
+            <response code="404">'Product Category' not found for the specific 'id'</response>
+            <response code="409">Cannot delete, due to referencing data found in other tables</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.ProductController.Get">
+            <summary>
+            Return all Products in the system. Order by name column
+            </summary>
+            <response code="200">Return all Products in the system. Order by name column</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.ProductController.Get(System.Guid)">
+            <summary>
+            Return the Product, searched for the specific 'id'.
+            </summary>
+            <response code="200">Return the Product, searched for the specific 'id'</response>
+            <response code="404">Product not found for the specific 'id'</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.ProductController.GetAvailabelCode">
+            <summary>
+            Return next available product code
+            </summary>
+            <response code="200">Return next available product code</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.ProductController.GetSearchResult(POS.Data.Entities.MasterProductForSearch)">
+            <summary>
+            Return the Product, searched for the specific seached fields.
+            </summary>
+            <response code="200">Return the Product, searched for the specific seached fields</response>
+            <response code="404">Product not found for the specific seached fields</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.ProductController.Create(POS.Data.Entities.MasterProductForCreateEntity)">
+            <summary>
+            Creates a Product in the system.
+            </summary>
+            <response code="201">Product created successfull in the system</response>
+            <response code="400">Unable to create due to validation error</response>
+            <response code="409">Dupplicate record found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.ProductController.Put(System.Guid,POS.Data.Entities.MasterProductForUpdateEntity)">
+            <summary>
+            Update the Product, for the specific 'id'
+            </summary>
+            <response code="204">Update the Product, for the specific 'id'</response>
+            <response code="400">Unable to update due to validation error</response>
+            <response code="404">Product not found for the specific 'id'</response>
+            <response code="409">Dupplicate record found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.ProductController.Delete(System.Guid)">
+            <summary>
+            Delete the Product, for the specific 'id'
+            </summary>
+            <response code="204">Delete the Product, for the specific 'id'</response>
+            <response code="404">Product not found for the specific 'id'</response>
+            <response code="409">Cannot delete, due to referencing data found in other tables</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.ProductSubCategoryController.Get">
+            <summary>
+            Return all 'Product Sub Category' in the system. Order by name column
+            </summary>
+            <response code="200">Return all 'Product Sub Category' in the system. Order by name column</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.ProductSubCategoryController.Get(System.Guid)">
+            <summary>
+            Return the 'Product Sub Category', searched for the specific 'id'.
+            </summary>
+            <response code="200">Return the 'Product Sub Category', searched for the specific 'id'</response>
+            <response code="404">'Product Sub Category' not found for the specific 'id'</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.ProductSubCategoryController.Get(System.String)">
+            <summary>
+            Return the 'Product Sub Category', searched for the specific 'name'.
+            </summary>
+            <response code="200">Return the 'Product Sub Category', searched for the specific 'name'</response>
+            <response code="404">'Product Sub Category' not found for the specific 'name'</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.ProductSubCategoryController.GetByParentCategory(System.Guid)">
+            <summary>
+            Return the 'Product Sub Category', searched for the specific parent category.
+            </summary>
+            <response code="200">Return the 'Product Sub Category', searched for the specific parent category</response>
+            <response code="404">'Product Sub Category' not found for the specific parent category</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.ProductSubCategoryController.Create(POS.Data.Entities.ProductSubCategoryForCreateEntity)">
+            <summary>
+            Creates a 'Product Sub Category' in the system.
+            </summary>
+            <response code="201">'Product Sub Category' created successfull in the system</response>
+            <response code="400">Unable to create due to validation error</response>
+            <response code="409">Dupplicate record found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.ProductSubCategoryController.Put(System.Guid,POS.Data.Entities.ProductSubCategoryForUpdateEntity)">
+            <summary>
+            Update the 'Product Sub Category', for the specific 'id'
+            </summary>
+            <response code="204">Update the 'Product Sub Category', for the specific 'id'</response>
+            <response code="400">Unable to update due to validation error</response>
+            <response code="404">'Product Sub Category' not found for the specific 'id'</response>
+            <response code="409">Dupplicate record found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.ProductSubCategoryController.Delete(System.Guid)">
+            <summary>
+            Delete the 'Product Sub Category', for the specific 'id'
+            </summary>
+            <response code="204">Delete the 'Product Sub Category', for the specific 'id'</response>
+            <response code="404">'Product Sub Category' not found for the specific 'id'</response>
+            <response code="409">Cannot delete, due to referencing data found in other tables</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.RacksController.Get">
+            <summary>
+            Return all 'Rack detail' in the system. Order by name column
+            </summary>
+            <response code="200">Return all 'Rack detail' in the system. Order by name column</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.RacksController.Get(System.Guid)">
+            <summary>
+            Return the 'Racks detail', searched for the specific 'id'.
+            </summary>
+            <response code="200">Return the 'Racks detail', searched for the specific 'id'</response>
+            <response code="404">'Racks detail' not found for the specific 'id'</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.RacksController.Get(System.String)">
+            <summary>
+            Return the 'Racks detail', searched for the specific 'name'.
+            </summary>
+            <response code="200">Return the 'Racks detail', searched for the specific 'name'</response>
+            <response code="404">'Racks detail' not found for the specific 'name'</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.RacksController.Create(POS.Data.Entities.MasterRacksForCreateEntity)">
+            <summary>
+            Creates a 'Racks detail' in the system.
+            </summary>
+            <response code="201">'Racks detail' created successfull in the system</response>
+            <response code="400">Unable to create due to validation error</response>
+            <response code="409">Dupplicate record found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.RacksController.Put(System.Guid,POS.Data.Entities.MasterRacksForUpdateEntity)">
+            <summary>
+            Update the 'Racks detail', for the specific 'id'
+            </summary>
+            <response code="204">Update the 'Racks detail', for the specific 'id'</response>
+            <response code="400">Unable to update due to validation error</response>
+            <response code="404">'Racks detail' not found for the specific 'id'</response>
+            <response code="409">Dupplicate record found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.RacksController.Delete(System.Guid)">
+            <summary>
+            Delete the 'Racks detail', for the specific 'id'
+            </summary>
+            <response code="204">Delete the 'Racks detail', for the specific 'id'</response>
+            <response code="404">'Racks detail' not found for the specific 'id'</response>
+            <response code="409">Cannot delete, due to referencing data found in other tables</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.StoreDetailController.Get">
+            <summary>
+            Return all 'Store detail' in the system. Order by name column
+            </summary>
+            <response code="200">Return all 'Store detail' in the system. Order by name column</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.StoreDetailController.Get(System.Guid)">
+            <summary>
+            Return the 'Store detail', searched for the specific 'id'.
+            </summary>
+            <response code="200">Return the 'Store detail', searched for the specific 'id'</response>
+            <response code="404">'Store detail' not found for the specific 'id'</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.StoreDetailController.Get(System.String)">
+            <summary>
+            Return the 'Store detail', searched for the specific 'name'.
+            </summary>
+            <response code="200">Return the 'Store detail', searched for the specific 'name'</response>
+            <response code="404">'Store detail' not found for the specific 'name'</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.StoreDetailController.Create(POS.Data.Entities.MasterStoreDetailForCreateEntity)">
+            <summary>
+            Creates a 'Store detail' in the system.
+            </summary>
+            <response code="201">'Store detail' created successfull in the system</response>
+            <response code="400">Unable to create due to validation error</response>
+            <response code="409">Dupplicate record found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.StoreDetailController.Put(System.Guid,POS.Data.Entities.MasterStoreDetailForUpdateEntity)">
+            <summary>
+            Update the 'Store detail', for the specific 'id'
+            </summary>
+            <response code="204">Update the 'Store detail', for the specific 'id'</response>
+            <response code="400">Unable to update due to validation error</response>
+            <response code="404">'Store detail' not found for the specific 'id'</response>
+            <response code="409">Dupplicate record found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.StoreDetailController.Delete(System.Guid)">
+            <summary>
+            Delete the 'Store detail', for the specific 'id'
+            </summary>
+            <response code="204">Delete the 'Store detail', for the specific 'id'</response>
+            <response code="404">'Store detail' not found for the specific 'id'</response>
+            <response code="409">Cannot delete, due to referencing data found in other tables</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.StoreTypeController.Get">
+            <summary>
+            Return all 'Store Type' in the system. Order by name column
+            </summary>
+            <response code="200">Return all 'Store Type' in the system. Order by name column</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.TaxDetailController.Get">
+            <summary>
+            Return all tax detail in the system. Order by tax detail column
+            </summary>
+            <response code="200">Return all tax detail in the system. Order by tax detail column</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.TaxDetailController.Get(System.Guid)">
+            <summary>
+            Return the tax detail, searched for the specific 'id'.
+            </summary>
+            <response code="200">Return the tax detail, searched for the specific 'id'</response>
+            <response code="404">Tax detail not found for the specific 'id'</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.TaxDetailController.Create(POS.Data.Entities.MasterTaxDetailForCreateEntity)">
+            <summary>
+            Creates a tax detail in the system.
+            </summary>
+            <response code="201">Tax detail created successfull in the system</response>
+            <response code="400">Unable to create due to validation error</response>
+            <response code="409">Dupplicate record found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.TaxDetailController.Put(System.Guid,POS.Data.Entities.MasterTaxDetailForUpdateEntity)">
+            <summary>
+            Update the tax detail, for the specific 'id'
+            </summary>
+            <response code="204">Update the tax detail, for the specific 'id'</response>
+            <response code="400">Unable to update due to validation error</response>
+            <response code="404">Tax detail not found for the specific 'id'</response>
+            <response code="409">Dupplicate record found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.TaxDetailController.Delete(System.Guid)">
+            <summary>
+            Delete the tax detail, for the specific 'id'
+            </summary>
+            <response code="204">Delete the tax detail, for the specific 'id'</response>
+            <response code="404">Tax detail not found for the specific 'id'</response>
+            <response code="409">Cannot delete, due to referencing data found in other tables</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.TaxTypeController.Get">
+            <summary>
+            Return all tax type in the system. Order by tax type column
+            </summary>
+            <response code="200">Return all tax type in the system. Order by tax type column</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.TaxTypeController.Get(System.Guid)">
+            <summary>
+            Return the tax type, searched for the specific 'id'.
+            </summary>
+            <response code="200">Return the tax type, searched for the specific 'id'</response>
+            <response code="404">Tax type not found for the specific 'id'</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.TaxTypeController.Create(POS.Data.Entities.MasterTaxTypeForCreateEntity)">
+            <summary>
+            Creates a tax type in the system.
+            </summary>
+            <response code="201">Tax type created successfull in the system</response>
+            <response code="400">Unable to create due to validation error</response>
+            <response code="409">Dupplicate record found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.TaxTypeController.Put(System.Guid,POS.Data.Entities.MasterTaxTypeForUpdateEntity)">
+            <summary>
+            Update the tax type, for the specific 'id'
+            </summary>
+            <response code="204">Update the tax type, for the specific 'id'</response>
+            <response code="400">Unable to update due to validation error</response>
+            <response code="404">Tax type not found for the specific 'id'</response>
+            <response code="409">Dupplicate record found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.TaxTypeController.Delete(System.Guid)">
+            <summary>
+            Delete the tax type, for the specific 'id'
+            </summary>
+            <response code="204">Delete the tax type, for the specific 'id'</response>
+            <response code="404">Tax type not found for the specific 'id'</response>
+            <response code="409">Cannot delete, due to referencing data found in other tables</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.UnitController.Get">
+            <summary>
+            Return all 'Unit' in the system. Order by  name column
+            </summary>
+            <response code="200">Return all 'Unit' in the system. Order by name column</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.UnitController.Get(System.Guid)">
+            <summary>
+            Return the 'Unit', searched for the specific 'id'.
+            </summary>
+            <response code="200">Return the 'Unit', searched for the specific 'id'</response>
+            <response code="404">'Unit' not found for the specific 'id'</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.UnitController.Create(POS.Data.Entities.MasterUnitForCreateEntity)">
+            <summary>
+            Creates a 'Unit' in the system.
+            </summary>
+            <response code="201">'Unit' created successfull in the system</response>
+            <response code="400">Unable to create due to validation error</response>
+            <response code="409">Dupplicate record found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.UnitController.Put(System.Guid,POS.Data.Entities.MasterUnitForUpdateEntity)">
+            <summary>
+            Update the 'Unit', for the specific 'id'
+            </summary>
+            <response code="204">Update the 'Unit', for the specific 'id'</response>
+            <response code="400">Unable to update due to validation error</response>
+            <response code="404">'Unit' not found for the specific 'id'</response>
+            <response code="409">Dupplicate record found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.UnitController.Delete(System.Guid)">
+            <summary>
+            Delete the 'Unit', for the specific 'id'
+            </summary>
+            <response code="204">Delete the 'Unit', for the specific 'id'</response>
+            <response code="404">'Unit' not found for the specific 'id'</response>
+            <response code="409">Cannot delete, due to referencing data found in other tables</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.UserRoleController.Get">
+            <summary>
+            Return all user roles in the system. Order by role name column
+            </summary>
+            <response code="200">Return all user roles in the system. Order by role column</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.UserRoleController.Get(System.Guid)">
+            <summary>
+            Return the user role, searched for the specific 'id'.
+            </summary>
+            <response code="200">Return the user role, searched for the specific 'id'</response>
+            <response code="404">User role not found for the specific 'id'</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.UserRoleController.Get(System.String)">
+            <summary>
+            Return the user role, searched for the specific 'id'.
+            </summary>
+            <response code="200">Return the user role, searched for the specific 'id'</response>
+            <response code="404">User role not found for the specific 'id'</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.UserRoleController.Create(POS.Data.Entities.MasterRoleForCreateEntity)">
+            <summary>
+            Creates a user role in the system.
+            </summary>
+            <response code="201">User role created successfull in the system</response>
+            <response code="400">Unable to create due to validation error</response>
+            <response code="409">Dupplicate record found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.UserRoleController.Put(System.Guid,POS.Data.Entities.MasterRoleForUpdateEntity)">
+            <summary>
+            Update the user role, for the specific 'id'
+            </summary>
+            <response code="204">Update the user role, for the specific 'id'</response>
+            <response code="400">Unable to update due to validation error</response>
+            <response code="404">User role not found for the specific 'id'</response>
+            <response code="409">Dupplicate record found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.UserRoleController.Delete(System.Guid)">
+            <summary>
+            Delete the user role, for the specific 'id'
+            </summary>
+            <response code="204">Delete the user role, for the specific 'id'</response>
+            <response code="404">User role not found for the specific 'id'</response>
+            <response code="409">Cannot delete, due to referencing data found in other tables</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.WalletController.Get">
+            <summary>
+            Return all 'Wallets' in the system. Order by  name column
+            </summary>
+            <response code="200">Return all 'Wallets' in the system. Order by name column</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.WalletController.Get(System.Guid)">
+            <summary>
+            Return the 'Wallets', searched for the specific 'id'.
+            </summary>
+            <response code="200">Return the 'Wallets', searched for the specific 'id'</response>
+            <response code="404">'Wallets' not found for the specific 'id'</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.WalletController.Create(POS.Data.Entities.MasterWalletForCreateEntity)">
+            <summary>
+            Creates a 'Wallet' in the system.
+            </summary>
+            <response code="201">'Wallet' created successfull in the system</response>
+            <response code="400">Unable to create due to validation error</response>
+            <response code="409">Dupplicate record found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.WalletController.Put(System.Guid,POS.Data.Entities.MasterWalletForUpdateEntity)">
+            <summary>
+            Update the 'Wallet', for the specific 'id'
+            </summary>
+            <response code="204">Update the 'Wallet', for the specific 'id'</response>
+            <response code="400">Unable to update due to validation error</response>
+            <response code="404">'Wallet' not found for the specific 'id'</response>
+            <response code="409">Dupplicate record found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:POS.API.Controllers.Master.WalletController.Delete(System.Guid)">
+            <summary>
+            Delete the 'Wallet', for the specific 'id'
+            </summary>
+            <response code="204">Delete the 'Wallet', for the specific 'id'</response>
+            <response code="404">'Wallet' not found for the specific 'id'</response>
+            <response code="409">Cannot delete, due to referencing data found in other tables</response>
+            <response code="500">Internal server error</response>
+        </member>
+    </members>
+</doc>
